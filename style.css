@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*padding and borders are included in the width and height*/
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #3A2436;
+}
+
+/* Navigator */
+
+.nav-container {
+
+    height: 96px;
+    background: #FEFAFA;
+    margin-top: -66px;
+    z-index: 500;
+    position: relative;
+}
+
+.wrapper {
+
+    width: 1272px;
+    margin: 0 auto;
+}
+
+nav {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 96px
+}
+
+nav ul {
+
+    display: flex;
+
+}
+
+nav .logo {
+
+    font-weight: 800;
+    font-size: 64px;
+    color: #3A2436;
+    text-decoration: none;
+
+    transition: 300ms;
+
+}
+
+nav .logo:hover {
+
+    transform: translateY(-8px);
+}
+
+.nav-right li {
+
+    font-weight: 400;
+    list-style: none;
+    /* delete bullet */
+    margin-right: 60px;
+
+}
+
+.nav-right li:nth-last-of-type(1) {
+
+    margin-right: 0px;
+
+}
+
+.nav-right li a {
+
+    font-size: 24px;
+    font-weight: 400;
+    color: #3A2436;
+    text-decoration: none;
+}
+
+
+
+/* Header */
+
+.header-container {
+
+    background: #FEDCE0 url(images/bg_effect.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    height: calc(100vh - 96px);
+    /*viewport height*/
+    display: flex;
+    align-items: center;
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-description {
+
+    margin-left: 119px;
+}
+
+.hero-description h1 {
+
+    font-weight: bold;
+    font-size: 64px;
+    margin-bottom: 48px;
+
+}
+
+.hero-description p {
+
+    font-family: "Avenir", sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1.36x;
+    width: 453px;
+    margin-bottom: 60px;
+
+}
+
+/* Social Icons */
+
+.hero-description ul {
+
+    width: 264px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.hero-description li {
+
+    list-style: none;
+}
+
+/* Hero Image */
+
+header .hero-image {
+
+    position: relative;
+    margin-right: 119px;
+
+}
+
+header .hero-image img {
+
+    width: 400px;
+    height: 400px;
+    transition: 300ms;
+    position: relative;
+    z-index: 5;
+}
+
+header .hero-image img:hover {
+
+    transform: rotate(-7deg);
+
+}
+
+
+header .hero-image .photo-bg {
+/* this was just empty div tag */
+
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 0px;
+    top: 0px;
+
+    background: #F5C659;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+    transform: rotate(-7deg);
+}
+
+/* Search Box */
+
+.search-box {
+
+    width: 1272px;
+    margin: 0 auto;
+    text-align: right;
+    position: relative;
+    top: 0;
+
+    transition: 300ms;
+
+}
+
+.search-box.active {
+
+    top: 96px;
+    z-index: 100;
+}
+
+.search-box input {
+
+    background: #FEFAFA;
+    border-radius: 0px 0px 8px 8px;
+
+    font-size: 24px;
+    line-height: 42px;
+    border: 0;
+    padding: 12px 48px;
+
+}
+
+.search-box input::placeholder {
+
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #b3b3b3;
+}
+
+/* Search & Close Buttons */
+
+/* 2 imgs inside a inside li works! */
+.nav-btn-container {
+
+    width: 36px;
+    display: flex;
+    position: relative;
+
+}
+
+.nav-btn-container img {
+
+    position: absolute;
+
+}
+
+.nav-btn-container .close-btn {
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: 300ms;
+
+}
+
+.nav-btn-container .search-btn {
+
+    pointer-events: auto; /* reacts to pointer events */
+    transition: 300ms;
+
+}
+
+.nav-btn-container.active .search-btn {
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+
+}
+
+.nav-btn-container.active .close-btn {
+
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+
+}
